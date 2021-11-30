@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import "compass";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root{
+    --clr-primary: hsl(120, 100%, 14%);
+    --clr-dark: hsl(0, 5%, 11%);
+}
+
+/* Header */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-primary);
+}
+
+.clubLogo{
+    flex: 1;
+    margin-left: 3rem;
+    margin-top: .3rem;
+    margin-bottom: .3rem;
+}
+
+.heading{
+    flex: 4;
+    color: white;
+}
+
+.heading h1, h3{
+    padding: 0.5rem;
+}
+
+.sponsorLogo{
+    flex: 1;
+}
+
+.sponsorLogo img{
+    background-color: var(--clr-dark);
+    padding: 2rem;
+}
+
+header img{
+    height: auto;
+    width: 9rem;
+}
+
+/* Heaer end */
+
+/* Nav bar*/
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(0, 5%, 11%);
+}
+
+.navbar li {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-left: 1px solid white;
+    cursor: pointer;
+    font-weight: 600;
+    height: 100%;
+    list-style-type: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+
+}
+
+/* Nav bar end */
+
+main {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+
+
+.left-side-container{
+    flex: 3;
+}
+
+.right-side-container{
+    flex: 1;
+}
+
+/*Left column styles*/
+
+/*Recent results */
+
+.recent-result-container {
+    
+    width: 95%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.recent-result-container:before{
+    content: '';
+    background-image: url("./Resources/pitchHorizontal.jpg");
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    z-index: -2;
+}
+
+.recent-result {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    
+}
+
+.recent-result:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-dark);
+    opacity: 0.8;
+    z-index: -1;
+    border-radius: 1rem;
+    border: 2px solid var(--clr-primary);
+}
+
+.recent-result img{
+    height: auto;
+    width: 9rem;
+}
+
+.recent-result h4 {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+
+.scoreline {
+    border: 2px solid var(--clr-primary);
+    background-color: #222;
+    padding: .5rem;
+}
+
+.away-team {
+    height: 177px;
+    width: 200px;
+    position: relative;
+}
+
+.away-team h4{
+    position: absolute;
+    bottom: 0;    
+}
+
+
+/* Recent results end */
+
+/* News stories */
+
+
+/* News stories end*/
+
+/*Left column style end */
