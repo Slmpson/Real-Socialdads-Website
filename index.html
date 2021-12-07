@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/339bff3e9e.js" crossorigin="anonymous"></script>
     <title>Real Socialdads FC | Home</title>
 </head>
 <body>
@@ -19,7 +20,9 @@
             <h3>South Woodham Ferrers 5-a-side team</h3>
         </div>
         <div class="sponsorLogo">
-            <img src="./Resources/greenekinglogo.png" alt="Sponsor Logo">
+            <a href="https://www.greeneking.co.uk/">
+               <img src="./Resources/greenekinglogo.png" alt="Sponsor Logo"> 
+            </a>
         </div>
     </header>
 
@@ -27,50 +30,297 @@
         <div class="nav-container">
             <ul class="navbar">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="fixtures.html">Fixtures & Results</a></li>
+                <li><a href="matches.html">Fixtures & Results</a></li>
                 <li><a href="team.html">Team</a></li>
                 <li><a href="stats.html">Statistics</a></li>
                 <li><a href="chickenchat.html">Chicken Chat</a></li>
-                <li><a href="quiz">Quiz</a></li>
-                <li><a href="quiz">Rob's Tactics</a></li>
-                <li><a href="quiz">Sign up</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="tactics.html">Rob's Tactics</a></li>
+                <li><a href="signup.html">Sign up</a></li>
             </ul>
         </div>
     </nav>
 
+<!-- Left Side Container -->
+
     <main>
         <section class="left-side-container">
-            <h2>Latest Result</h2>
+
+            <h2 class="subheading">Latest Result</h2>
+
             <div class="recent-result-container">
                 <div class="recent-result">
                     <div class="home-team">
                         <img src="/Resources/clublogo.png" alt="Home Team Badge"> 
                         <h4>Real Socialdads</h4>
+                        <p class="goal-scorers">R.Watts &nbsp; <i class="fas fa-futbol"></i>&nbsp;&nbsp;<i class="fas fa-futbol"></i>
+                        <br>
+                        A.Hill &nbsp; <i class="fas fa-futbol"></i>
+                        </p>
+                        <p class="assists"><strong>Assists:</strong> A.Franklin, A.Morrison, <br> C.Simpson</p>
                     </div>     
                     <div class="scoreline">
-                        <h4> &nbsp;&nbsp;0 &nbsp; - &nbsp; 0 &nbsp;&nbsp;</h4>
+                        <h4> &nbsp;&nbsp;3 &nbsp; - &nbsp; 5 &nbsp;&nbsp;</h4>
                     </div>   
                     <div class="away-team">
-                        <img src="/Resources/notAKalouBadge.jpg" alt="">
-                        <h4>"Away Team Name"</h4>                       
+                        <img src="/Resources/the-boners.png" alt="">
+                        <h4>The Boners</h4>                       
                     </div>
                 </div>
             </div>
 
-            <h2>News Stories</h2>
+            <h2 class="subheading">Latest News</h2>
+
             <div class="news-story-container">
                 <div class="news-story-1">
-                    
+                    <img src="/Resources/QuestionMark.jpg" alt="">
+                    <p class="newsHeading">Question of the week:</p>
+                    <p class="newsCaption">If you could go against any professional footballer, who would you choose?</p>
                 </div>
                 <div class="news-story-2">
-
+                    <img src="./Resources/news-theatre.jpg" alt="">
+                    <p class="newsHeading">Theatre over football?</p>
+                    <p class="newsCaption">M.Davies makes himself unavailable Monday as he chooses the theatre over football.</p>
                 </div>
             </div>
+
+            <h2 class="subheading">Players</h2>
+
+            <!--Player carousel-->
+
+
+            <div id="playerCarousel">
+                <input type="radio" name="slider" id="player-1" checked>
+                <input type="radio" name="slider" id="player-2">
+                <input type="radio" name="slider" id="player-3">
+                <input type="radio" name="slider" id="player-4">
+                <input type="radio" name="slider" id="player-5">
+                <input type="radio" name="slider" id="player-6">
+                <input type="radio" name="slider" id="player-7">
+                <input type="radio" name="slider" id="player-8">
+                <input type="radio" name="slider" id="player-9">
+                <input type="radio" name="slider" id="player-10">
+                <input type="radio" name="slider" id="player-11">
+                <input type="radio" name="slider" id="player-12">
+                <input type="radio" name="slider" id="player-13">
+
+            <div class="player-cards">
+                <label for="player-1" class="card" id="player-1-andy">
+                    <div class="playerCard">
+                        <img src="/Resources/personTemplate.png" alt="">
+                        <p class="player-card-details"><mark>1</mark></span>&nbsp;&nbsp; A.Franklin (GK)</p>
+                    </div>                   
+                </label>
+                    
+                <label for="player-2" class="card" id="player-2-darren">
+                    <div class="playerCard">
+                        <img src="/Resources/darren.png" alt="">
+                        <p class="player-card-details"><mark>3</mark></span>&nbsp;&nbsp; Dazzler (DEF)</p>
+                    </div>
+                </label>
+
+                <label for="player-3" class="card" id="player-3-mitch">
+                    <div class="playerCard">
+                        <img src="/Resources/personTemplate.png" alt="">
+                        <p class="player-card-details"><mark>10</mark></span>&nbsp;&nbsp; M.Davies (DEF)</p>
+                    </div>  
+
+                </label>
+
+                <label for="player-4" class="card" id="player-4-rob">
+                    <div class="playerCard">
+                        <img src="/Resources/personTemplate.png" alt="">
+                        <p class="player-card-details"><mark>6</mark></span>&nbsp;&nbsp; R.Watts (DEF)</p>
+                    </div>                    
+                </label>
+
+                <label for="player-5" class="card" id="player-5-adrian">
+                    <div class="playerCard">
+                        <img src="/Resources/adrian.jpg" alt="">
+                        <p class="player-card-details"><mark>17</mark></span>&nbsp;&nbsp; A.Watts (DEF)</p>
+                    </div>                    
+                </label>
+
+                <label for="player-6" class="card" id="player-6-lee">
+                    <div class="playerCard">
+                        <img src="/Resources/lee.png" alt="">
+                        <p class="player-card-details"><mark>7</mark></span>&nbsp;&nbsp; L.Perry (DEF)</p>
+                    </div>                   
+                </label>
+
+                <label for="player-7" class="card" id="player-7-ashley">
+                    <div class="playerCard">
+                        <img src="/Resources/personTemplate.png" alt="">
+                        <p class="player-card-details"><mark>8</mark></span>&nbsp;&nbsp; A.Hill (DEF)</p>
+                    </div>                   
+                </label>
+
+                <label for="player-8" class="card" id="player-8-simon">
+                    <div class="playerCard">
+                        <img src="/Resources/personTemplate.png" alt="">
+                        <p class="player-card-details"><mark>?</mark></span>&nbsp;&nbsp; S.Thomas (MID)</p>
+                    </div>                    
+                </label>
+
+                <label for="player-9" class="card" id="player-9-graham">
+                    <div class="playerCard">
+                        <img src="/Resources/personTemplate.png" alt="">
+                        <p class="player-card-details"><mark>2</mark></span>&nbsp;&nbsp; G.Briggs (MID)</p>
+                    </div>                  
+                </label>
+
+                <label for="player-10" class="card" id="player-10-adam">
+                    <div class="playerCard">
+                        <img src="/Resources/personTemplate.png" alt="">
+                        <p class="player-card-details"><mark>8</mark></span>&nbsp;&nbsp; A.Morrison(MID)</p>
+                    </div>                
+                </label>
+
+                <label for="player-11" class="card" id="player-11-chris">
+                    <div class="playerCard">
+                        <img src="/Resources/personTemplate.png" alt="">
+                        <p class="player-card-details"><mark>13</mark></span>&nbsp;&nbsp; C.Hancox (STR)</p>
+                    </div>                
+                </label>
+
+                <label for="player-12" class="card" id="player-12-jay">
+                    <div class="playerCard">
+                        <img src="/Resources/personTemplate.png" alt="">
+                        <p class="player-card-details"><mark>77</mark></span>&nbsp;&nbsp; J.Spearman (STR)</p>
+                    </div>                
+                </label>
+
+                <label for="player-13" class="card" id="player-13-craig">
+                    <div class="playerCard">
+                       <img src="/Resources/personTemplate.png" alt="">
+                        <p class="player-card-details"><mark>14</mark></span>&nbsp;&nbsp; C.Simpson (STR)</p> 
+                    </div>                
+                </label>
+            </div>
+
+            </div> <!--End of carousel-->
+
         </section>
+
+
+<!-- Right Side Container  -->
+
         <section class="right-side-container">
+            <div id="league-table-home">
+                <div class="league-table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Team</th>
+                                <th>P</th>
+                                <th>W</th>
+                                <th>D</th>
+                                <th>L</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td class="table-position">1</td>
+                                <td class="table-team-name">Hardly Athletic</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td class="points">7</td>
+                            </tr>
+                            <tr class="even-background">
+                                <td class="table-position">2</td>
+                                <td class="table-team-name">The Boners</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td class="points">7</td>
+                            </tr>
+                            <tr>
+                                <td class="table-position">3</td>
+                                <td class="table-team-name">Expected Toulouse</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td class="points">6</td>
+                            </tr>
+                            <tr class="even-background">
+                                <td class="table-position">4</td>
+                                <td class="table-team-name">Real Socialdads</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td class="points">3</td>
+                            </tr>
+                            <tr>
+                                <td class="table-position">5</td>
+                                <td class="table-team-name">No Barnet FC</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td class="points">3</td>
+                            </tr>
+                            <tr class="even-background">
+                                <td class="table-position">6</td>
+                                <td class="table-team-name">Paris Ganja Man</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td class="points">3</td>
+                            </tr>
+                            <tr>
+                                <td class="table-position">7</td>
+                                <td class="table-team-name">Pablo Seshcabar</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td class="points">3</td>
+                            </tr>
+                            <tr class="even-background">
+                                <td class="table-position">8</td>
+                                <td class="table-team-name">Sparta Dudley</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td class="points">3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             
+            </div>
+
+            <div class="kit-container">
+                <h4 class="home-kit-title">Home kit</h4>
+                <img class="kit" src="/Resources/home-kit.png" alt="">
+                <h4 class="away-kit-title">Away kit</h4>
+                <img class="kit" src="/Resources/away-kit.png" alt="">
+                <h4 class="third-kit-title">Third kit</h4>
+                <img class="kit" src="/Resources/third-kit.png" alt="">
+            </div>
         </section>
     </main>
+
+    <footer>
+        <h5>&copy Copyright Real Socialdads Football Club</h5>
+        <a href="mailto:chickenchat@btinternet.com" class="footer__link">chickenchat@btinternet.com</a>
+        <ul class="social-list">
+            <li class="social-list__item"><a href="#" class="social-list__link"><i class="fab fa-facebook"></i></i></a></li>
+            <li class="social-list__item"><a href="#" class="social-list__link"><i class="fab fa-instagram"></i></a></li>
+            <li class="social-list__item"><a href="#" class="social-list__link"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+        <h6>Last Updated: 07/12/2021</h6>
+    </footer>
     
 </body>
 </html>

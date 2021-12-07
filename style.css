@@ -9,8 +9,13 @@
 }
 
 :root{
-    --clr-primary: hsl(120, 100%, 14%);
+    --clr-primary: hsl(150, 87%, 27%);
     --clr-dark: hsl(0, 5%, 11%);
+}
+
+.underConstruction {
+    display: block;
+    margin: 0 auto;
 }
 
 /* Header */
@@ -19,7 +24,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--clr-primary);
+    background:linear-gradient(90deg, var(--clr-primary) 53%, var(--clr-dark) 89%)
 }
 
 .clubLogo{
@@ -43,13 +48,17 @@ header{
 }
 
 .sponsorLogo img{
-    background-color: var(--clr-dark);
     padding: 2rem;
 }
 
-header img{
+header .clubLogo img{
     height: auto;
     width: 9rem;
+}
+
+header .sponsorLogo img {
+    height: auto;
+    width: 14rem;
 }
 
 /* Heaer end */
@@ -63,6 +72,7 @@ header img{
     background: hsl(0, 5%, 11%);
 }
 
+
 .navbar li {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -71,14 +81,19 @@ header img{
     border-left: 1px solid white;
     cursor: pointer;
     font-weight: 600;
-    height: 100%;
     list-style-type: none;
+    transition: 300ms linear;
 }
 
 .navbar a {
     text-decoration: none;
     color: white;
+    padding: 2em;     
+    margin: -2em;
+}
 
+.navbar li:hover {
+    background-color: #333;
 }
 
 /* Nav bar end */
@@ -97,9 +112,18 @@ main {
 
 .right-side-container{
     flex: 1;
+    border-left: 1px dotted black;
+    margin-top: 1rem;
+    
 }
 
 /*Left column styles*/
+
+.subheading{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
 
 /*Recent results */
 
@@ -182,12 +206,658 @@ main {
     bottom: 0;    
 }
 
+.goal-scorers{
+    font-weight: bold;
+    padding: 0.7rem;
+    color: white;
+}
+
+.assists{
+    padding-left: 0.7rem;
+    color: white;
+}
+
 
 /* Recent results end */
 
-/* News stories */
+/* Latest news */
+
+.news-story-container{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+
+}
+
+.news-story-1 {
+    width: 47%;
+}
+
+.news-story-1 img{
+    width: 100%;
+    height: 15rem
+}
+
+.news-story-2{
+    width: 47%;
+}
+
+.news-story-2 img {
+    width: 100%;
+    height: 15rem;
+}
+
+.newsHeading{
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding-left: 5px;
+    padding-bottom: 0.5rem;
+}
+
+.newsCaption{
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+/* Latest news end*/
+
+/* Player carousel */
+
+input[type="radio"] {
+    display: none;
+}
+
+#playerCarousel{
+    width: 95%;
+    height: 450px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./Resources/carousel-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
-/* News stories end*/
+.card{
+    position: absolute;
+    min-width: 205px;
+    min-height: 280px;
+    margin: 0 auto;
+    transition: transform .4s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-cards{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.playerCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 5%;
+    overflow: hidden;
+    height: 100%;
+    background-color: white;
+}
+
+.player-cards img{
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.player-card-details{
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+mark{
+    background-color: var(--clr-primary);
+    color: white;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+/* Carousel animations */
+
+#player-2-darren{
+    box-shadow: 0px 0px 10px 7px rgb(201, 27, 201);
+    animation: pulsate 2s ease-out infinite;
+}
+
+@keyframes pulsate{
+    0% {box-shadow: 0 0 0 0 rgb(201, 27, 201);}
+    50% {box-shadow: 0 0 10px 7px rgb(201, 27, 201);}
+    100% {box-shadow: 0 0 0 0 rgb(201, 27, 201);}
+}
+
+ #player-1:checked ~ .player-cards #player-13-craig {
+    transform: translatex(-70%) scale(.8);
+  filter: contrast(50%);
+  z-index: -1;
+}
+
+#player-1:checked ~ .player-cards #player-2-darren {
+    transform: translateX(70%) scale(.8);
+    filter: contrast(50%);
+    z-index: -1;
+}
+
+#player-1:checked ~ .player-cards #player-3-mitch, 
+#player-1:checked ~ .player-cards #player-4-rob,
+#player-1:checked ~ .player-cards #player-5-adrian,
+#player-1:checked ~ .player-cards #player-6-lee,
+#player-1:checked ~ .player-cards #player-7-ashley,
+#player-1:checked ~ .player-cards #player-8-simon,
+#player-1:checked ~ .player-cards #player-9-graham,
+#player-1:checked ~ .player-cards #player-10-adam,
+#player-1:checked ~ .player-cards #player-11-chris,
+#player-1:checked ~ .player-cards #player-12-jay 
+{
+    transform: scale(.8);
+    z-index: -1;
+    opacity: 0;
+}
+
+
+
+#player-2:checked ~ .player-cards #player-1-andy {
+    transform: translatex(-70%) scale(.8);
+    filter: contrast(50%);
+    z-index: -1;
+}
+
+#player-2:checked ~ .player-cards #player-3-mitch {
+    transform: translateX(70%) scale(.8);
+    filter: contrast(50%);
+    z-index: -1;
+}
+
+#player-2:checked ~ .player-cards #player-4-rob,
+#player-2:checked ~ .player-cards #player-5-adrian,
+#player-2:checked ~ .player-cards #player-6-lee,
+#player-2:checked ~ .player-cards #player-7-ashley,
+#player-2:checked ~ .player-cards #player-8-simon,
+#player-2:checked ~ .player-cards #player-9-graham,
+#player-2:checked ~ .player-cards #player-10-adam,
+#player-2:checked ~ .player-cards #player-11-chris,
+#player-2:checked ~ .player-cards #player-12-jay,
+#player-2:checked ~ .player-cards #player-13-craig
+ 
+ {
+    transform: scale(.8);
+    z-index: -1;
+    opacity: 0;
+}
+
+#player-3:checked ~ .player-cards #player-2-darren {
+    transform: translatex(-70%) scale(.8);
+  filter: contrast(50%);
+  z-index: -1;
+}
+
+#player-3:checked ~ .player-cards #player-4-rob {
+    transform: translateX(70%) scale(.8);
+    filter: contrast(50%);
+    z-index: -1;
+}
+
+#player-3:checked ~ .player-cards #player-1-andy,
+#player-3:checked ~ .player-cards #player-5-adrian,
+#player-3:checked ~ .player-cards #player-6-lee,
+#player-3:checked ~ .player-cards #player-7-ashley,
+#player-3:checked ~ .player-cards #player-8-simon,
+#player-3:checked ~ .player-cards #player-9-graham,
+#player-3:checked ~ .player-cards #player-10-adam,
+#player-3:checked ~ .player-cards #player-11-chris,
+#player-3:checked ~ .player-cards #player-12-jay,
+#player-3:checked ~ .player-cards #player-13-craig
+ 
+ {
+    transform: scale(.8);
+    z-index: -1;
+    opacity: 0;
+}
+
+#player-4:checked ~ .player-cards #player-3-mitch {
+    transform: translatex(-70%) scale(.8);
+  filter: contrast(50%);
+  z-index: -1;
+}
+
+#player-4:checked ~ .player-cards #player-5-adrian {
+    transform: translateX(70%) scale(.8);
+    filter: contrast(50%);
+    z-index: -1;
+}
+
+#player-4:checked ~ .player-cards #player-1-andy,
+#player-4:checked ~ .player-cards #player-2-darren,
+#player-4:checked ~ .player-cards #player-6-lee,
+#player-4:checked ~ .player-cards #player-7-ashley,
+#player-4:checked ~ .player-cards #player-8-simon,
+#player-4:checked ~ .player-cards #player-9-graham,
+#player-4:checked ~ .player-cards #player-10-adam,
+#player-4:checked ~ .player-cards #player-11-chris,
+#player-4:checked ~ .player-cards #player-12-jay,
+#player-4:checked ~ .player-cards #player-13-craig
+ 
+ {
+    transform: scale(.8);
+    z-index: -1;
+    opacity: 0;
+}
+
+#player-5:checked ~ .player-cards #player-4-rob {
+    transform: translatex(-70%) scale(.8);
+  filter: contrast(50%);
+  z-index: -1;
+}
+
+#player-5:checked ~ .player-cards #player-6-lee {
+    transform: translateX(70%) scale(.8);
+    filter: contrast(50%);
+    z-index: -1;
+}
+
+#player-5:checked ~ .player-cards #player-1-andy,
+#player-5:checked ~ .player-cards #player-2-darren,
+#player-5:checked ~ .player-cards #player-3-mitch, 
+#player-5:checked ~ .player-cards #player-7-ashley,
+#player-5:checked ~ .player-cards #player-8-simon,
+#player-5:checked ~ .player-cards #player-9-graham,
+#player-5:checked ~ .player-cards #player-10-adam,
+#player-5:checked ~ .player-cards #player-11-chris,
+#player-5:checked ~ .player-cards #player-12-jay,
+#player-5:checked ~ .player-cards #player-13-craig
+ 
+ {
+    transform: scale(.8);
+    z-index: -1;
+    opacity: 0;
+}
+
+#player-6:checked ~ .player-cards #player-5-adrian {
+    transform: translatex(-70%) scale(.8);
+  filter: contrast(50%);
+  z-index: -1;
+}
+
+#player-6:checked ~ .player-cards #player-7-ashley {
+    transform: translateX(70%) scale(.8);
+    filter: contrast(50%);
+    z-index: -1;
+}
+
+#player-6:checked ~ .player-cards #player-1-andy,
+#player-6:checked ~ .player-cards #player-2-darren,
+#player-6:checked ~ .player-cards #player-3-mitch, 
+#player-6:checked ~ .player-cards #player-4-rob,
+#player-6:checked ~ .player-cards #player-8-simon,
+#player-6:checked ~ .player-cards #player-9-graham,
+#player-6:checked ~ .player-cards #player-10-adam,
+#player-6:checked ~ .player-cards #player-11-chris,
+#player-6:checked ~ .player-cards #player-12-jay,
+#player-6:checked ~ .player-cards #player-13-craig
+ 
+ {
+    transform: scale(.8);
+    z-index: -1;
+    opacity: 0;
+}
+
+#player-7:checked ~ .player-cards #player-6-lee {
+    transform: translatex(-70%) scale(.8);
+  filter: contrast(50%);
+  z-index: -1;
+}
+
+#player-7:checked ~ .player-cards #player-8-simon {
+    transform: translateX(70%) scale(.8);
+    filter: contrast(50%);
+    z-index: -1;
+}
+
+#player-7:checked ~ .player-cards #player-1-andy,
+#player-7:checked ~ .player-cards #player-2-darren,
+#player-7:checked ~ .player-cards #player-3-mitch, 
+#player-7:checked ~ .player-cards #player-4-rob,
+#player-7:checked ~ .player-cards #player-5-adrian,
+#player-7:checked ~ .player-cards #player-9-graham,
+#player-7:checked ~ .player-cards #player-10-adam,
+#player-7:checked ~ .player-cards #player-11-chris,
+#player-7:checked ~ .player-cards #player-12-jay,
+#player-7:checked ~ .player-cards #player-13-craig
+ 
+ {
+    transform: scale(.8);
+    z-index: -1;
+    opacity: 0;
+}
+
+#player-8:checked ~ .player-cards #player-7-ashley {
+    transform: translatex(-70%) scale(.8);
+  filter: contrast(50%);
+  z-index: -1;
+}
+
+#player-8:checked ~ .player-cards #player-9-graham {
+    transform: translateX(70%) scale(.8);
+    filter: contrast(50%);
+    z-index: -1;
+}
+
+#player-8:checked ~ .player-cards #player-1-andy,
+#player-8:checked ~ .player-cards #player-2-darren,
+#player-8:checked ~ .player-cards #player-3-mitch, 
+#player-8:checked ~ .player-cards #player-4-rob,
+#player-8:checked ~ .player-cards #player-5-adrian,
+#player-8:checked ~ .player-cards #player-6-lee,
+#player-8:checked ~ .player-cards #player-10-adam,
+#player-8:checked ~ .player-cards #player-11-chris,
+#player-8:checked ~ .player-cards #player-12-jay,
+#player-8:checked ~ .player-cards #player-13-craig
+ 
+ {
+    transform: scale(.8);
+    z-index: -1;
+    opacity: 0;
+}
+
+#player-9:checked ~ .player-cards #player-8-simon {
+    transform: translatex(-70%) scale(.8);
+  filter: contrast(50%);
+  z-index: -1;
+}
+
+#player-9:checked ~ .player-cards #player-10-adam {
+    transform: translateX(70%) scale(.8);
+    filter: contrast(50%);
+    z-index: -1;
+}
+
+#player-9:checked ~ .player-cards #player-1-andy,
+#player-9:checked ~ .player-cards #player-2-darren,
+#player-9:checked ~ .player-cards #player-3-mitch, 
+#player-9:checked ~ .player-cards #player-4-rob,
+#player-9:checked ~ .player-cards #player-5-adrian,
+#player-9:checked ~ .player-cards #player-6-lee,
+#player-9:checked ~ .player-cards #player-7-ashley,
+#player-9:checked ~ .player-cards #player-11-chris,
+#player-9:checked ~ .player-cards #player-12-jay,
+#player-9:checked ~ .player-cards #player-13-craig
+ 
+ {
+    transform: scale(.8);
+    z-index: 0;
+    opacity: 0;
+}
+
+#player-10:checked ~ .player-cards #player-9-graham {
+    transform: translatex(-70%) scale(.8);
+  filter: contrast(50%);
+  z-index: -1;
+}
+
+#player-10:checked ~ .player-cards #player-11-chris {
+    transform: translateX(70%) scale(.8);
+    filter: contrast(50%);
+    z-index: -1;
+}
+
+#player-10:checked ~ .player-cards #player-1-andy,
+#player-10:checked ~ .player-cards #player-2-darren,
+#player-10:checked ~ .player-cards #player-3-mitch, 
+#player-10:checked ~ .player-cards #player-4-rob,
+#player-10:checked ~ .player-cards #player-5-adrian,
+#player-10:checked ~ .player-cards #player-6-lee,
+#player-10:checked ~ .player-cards #player-7-ashley,
+#player-10:checked ~ .player-cards #player-8-simon,
+#player-10:checked ~ .player-cards #player-12-jay,
+#player-10:checked ~ .player-cards #player-13-craig
+ 
+ {
+    transform: scale(.8);
+    z-index: 0;
+    opacity: 0;
+}
+
+#player-11:checked ~ .player-cards #player-10-adam {
+    transform: translatex(-70%) scale(.8);
+  filter: contrast(50%);
+  z-index: -1;
+}
+
+#player-11:checked ~ .player-cards #player-12-jay {
+    transform: translateX(70%) scale(.8);
+    filter: contrast(50%);
+    z-index: -1;
+}
+
+#player-11:checked ~ .player-cards #player-1-andy,
+#player-11:checked ~ .player-cards #player-2-darren,
+#player-11:checked ~ .player-cards #player-3-mitch, 
+#player-11:checked ~ .player-cards #player-4-rob,
+#player-11:checked ~ .player-cards #player-5-adrian,
+#player-11:checked ~ .player-cards #player-6-lee,
+#player-11:checked ~ .player-cards #player-7-ashley,
+#player-11:checked ~ .player-cards #player-8-simon,
+#player-11:checked ~ .player-cards #player-9-graham,
+#player-11:checked ~ .player-cards #player-13-craig
+ 
+ {
+    transform: scale(.8);
+    z-index: 0;
+    opacity: 0;
+}
+
+#player-12:checked ~ .player-cards #player-11-chris {
+    transform: translatex(-70%) scale(.8);
+  filter: contrast(50%);
+  z-index: -1;
+}
+
+#player-12:checked ~ .player-cards #player-13-craig {
+    transform: translateX(70%) scale(.8);
+    filter: contrast(50%);
+    z-index: -1;
+}
+
+#player-12:checked ~ .player-cards #player-1-andy,
+#player-12:checked ~ .player-cards #player-2-darren,
+#player-12:checked ~ .player-cards #player-3-mitch, 
+#player-12:checked ~ .player-cards #player-4-rob,
+#player-12:checked ~ .player-cards #player-5-adrian,
+#player-12:checked ~ .player-cards #player-6-lee,
+#player-12:checked ~ .player-cards #player-7-ashley,
+#player-12:checked ~ .player-cards #player-8-simon,
+#player-12:checked ~ .player-cards #player-9-graham,
+#player-12:checked ~ .player-cards #player-10-adam
+ 
+ {
+    transform: scale(.8);
+    z-index: -1;
+    opacity: 0;
+}
+
+#player-13:checked ~ .player-cards #player-12-jay {
+    transform: translatex(-70%) scale(.8);
+  filter: contrast(50%);
+  z-index: 0;
+}
+
+#player-13:checked ~ .player-cards #player-1-andy{
+    transform: translateX(70%) scale(.8);
+    filter: contrast(50%);
+    z-index: 0;
+}
+
+#player-13:checked ~ .player-cards #player-2-darren,
+#player-13:checked ~ .player-cards #player-3-mitch, 
+#player-13:checked ~ .player-cards #player-4-rob,
+#player-13:checked ~ .player-cards #player-5-adrian,
+#player-13:checked ~ .player-cards #player-6-lee,
+#player-13:checked ~ .player-cards #player-7-ashley,
+#player-13:checked ~ .player-cards #player-8-simon,
+#player-13:checked ~ .player-cards #player-9-graham,
+#player-13:checked ~ .player-cards #player-10-adam,
+#player-13:checked ~ .player-cards #player-11-chris
+ 
+ {
+    transform: scale(.8);
+    z-index: -1;
+    opacity: 0;
+}
+
+/* Carousel end */
 
 /*Left column style end */
+
+/* Right column style */
+
+
+/* League Table*/ 
+
+.league-table-container{
+    width: 50%;
+}
+
+table{
+    width: 100%;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+table, thead, tr, td {
+    padding: 0.8rem;
+}
+
+.table-team-name, .table-position{
+    font-weight: bold;
+}
+
+thead{
+    border: 1px solid black;
+}
+
+thead{
+    background-color: #6d6d6d70;
+}
+
+.even-background{
+    background-color: #f3f3f3;
+}
+
+.points{
+    font-weight: bold;
+}
+
+/* League Table End */
+
+footer{
+    text-align: center;
+    color: #f4f4f4;
+    background-color: var(--clr-primary);
+    padding: 2rem;
+    margin-top: 2rem;
+    border-top:var(--clr-dark) 1px solid
+}
+
+h5{
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+h6{
+    padding: 1rem;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.social-list__item {
+    margin: 0 0.5em;
+    
+}
+
+.social-list__link {
+    padding: 0.5em; 
+    color: white;
+    font-size: 1.5rem;
+    transition: 300ms;
+}
+
+.footer__link {
+    color: white;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+.footer__link:hover,
+.social-list__link:hover{
+    opacity: 0.7;
+}
+
+.footer__link:hover{
+    text-decoration: underline;
+}
+
+/* kit container styles */
+
+.kit-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kit{
+    height: 200px;
+    width: auto;
+    margin-bottom: 2.5rem;
+}
+
+.home-kit-title{
+    background-color: var(--clr-primary);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+}
+.away-kit-title{
+    background-color: rgb(38, 38, 185);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+}
+.third-kit-title{
+    background-color: rgb(167, 24, 185);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+}
+
+/* kit container styles end */
+
+
+/*Right column style end */
