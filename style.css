@@ -333,6 +333,12 @@ mark{
     padding-right: 3px;
 }
 
+#wheelchair{
+    background-color: blue;
+    color: white;
+    padding: 2px;
+}
+
 
 /* Carousel animations */
 
@@ -738,7 +744,7 @@ mark{
     width: 50%;
 }
 
-table{
+.league-table{
     width: 100%;
     font-size: 0.9rem;
     margin-bottom: 1rem;
@@ -770,6 +776,46 @@ thead{
 
 /* League Table End */
 
+/* kit container styles */
+
+.kit-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kit{
+    height: 200px;
+    width: auto;
+    margin-bottom: 2.5rem;
+}
+
+.home-kit-title, .away-kit-title, .third-kit-title{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px black;
+}
+
+.home-kit-title{
+    background-color: var(--clr-primary);
+    
+}
+.away-kit-title{
+    background-color: rgb(38, 38, 185);
+}
+.third-kit-title{
+    background-color: rgb(167, 24, 185);
+}
+
+/* kit container styles end */
+
+/*Right column style end */
+
+
+/* footer start */
 footer{
     text-align: center;
     color: #f4f4f4;
@@ -823,41 +869,45 @@ h6{
     text-decoration: underline;
 }
 
-/* kit container styles */
+/* Footer end */
 
-.kit-container{
+/* -------------------------- stats.html ------------------------*/
+
+/* https://www.youtube.com/watch?v=Ay93z3mZuh8 */
+
+.season-dropdown-container{
+    width: 50%;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
 }
 
-.kit{
-    height: 200px;
-    width: auto;
-    margin-bottom: 2.5rem;
+/* #season-dropdown{
+
+} */
+
+.stats-table-container{
+    width: 80%;
+    margin: 0 auto;
 }
 
-.home-kit-title{
-    background-color: var(--clr-primary);
-    padding-left: 1rem;
-    padding-right: 1rem;
+.stats-table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-bottom: 1px solid var(--clr-primary);
+}
+
+.stats-table thead, th{
+    background-color: black;
     color: white;
-}
-.away-kit-title{
-    background-color: rgb(38, 38, 185);
-    padding-left: 1rem;
-    padding-right: 1rem;
-    color: white;
-}
-.third-kit-title{
-    background-color: rgb(167, 24, 185);
-    padding-left: 1rem;
-    padding-right: 1rem;
-    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-/* kit container styles end */
+.stats-table tr:nth-child(odd) {background-color: #f2f2f2;}
 
 
-/*Right column style end */
+
