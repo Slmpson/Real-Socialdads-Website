@@ -899,6 +899,7 @@ h6{
     text-align: center;
     border-collapse: collapse;
     border-bottom: 1px solid var(--clr-primary);
+    display: none;
 }
 
 .stats-table thead, th{
@@ -1001,8 +1002,30 @@ h6{
 }
 
 .rob-tactics-container{
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
+}
+
+.rob-tactics-container-left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rob-tactics-container-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#canvas{
+    /* width: 500px;
+    height: 500px; */
+    border: 1px solid red;
 }
 
 /*----------------------------tactics.html end----------------------*/

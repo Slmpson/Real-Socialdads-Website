@@ -43,14 +43,14 @@
 
     <div class="season-dropdown-container">
         <select name="season" id="season-dropdown">
-        <option value="season-1" data-for-season="1">Season: 09/08/2021 - 15/11/2021</option>
-        <option value="season-2" data-for-season="2">Season: 22/11/2021 - 10/03/2021</option>
+        <option value="season-1" class="season-table">Season: 09/08/2021 - 15/11/2021</option>
+        <option value="season-2" class="season-table">Season: 22/11/2021 - 10/03/2021</option>
         </select>
     </div>
     
 
     <div class="stats-table-container">
-        <table class="stats-table" data-season="1">
+        <table class="stats-table" id="season-1">
             <thead>
                 <tr>
                     <th>Player</th>
@@ -309,7 +309,7 @@
                 </tr>
             </tbody>
         </table>
-        <table class="stats-table" data-season="2">
+        <table class="stats-table" id="season-2">
             <thead>
                 <tr>
                     <th>Player</th>
@@ -580,5 +580,18 @@
         </ul>
         <h6 id=lastModified></h6>
     </footer>
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#season-dropdown").on('change', function(){
+                $(".stats-table").hide();
+                $("#" + $(this).val()).fadeIn(700);
+            }).change();
+        });
+    </script>
 </body>
 </html>
