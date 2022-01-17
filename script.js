@@ -58,6 +58,9 @@ window.addEventListener("load", () => {
     const ctx = canvas.getContext("2d");
     let offsetX;
     let offsetY;
+    // var tacticsCanvas = document.querySelector('.tactics-canvas');
+    // var heightRatio = 1.2;
+    // tacticsCanvas.height = tacticsCanvas.width * heightRatio
 
     //resizing
     // could add function window.addEventListener('resize' (run function)) to re-adjust canvas size
@@ -75,7 +78,7 @@ window.addEventListener("load", () => {
     window.onresize=function(e){ reOffset(); }
 
     // // order matters, top has an effect on that below
-    ctx.strokeStyle = 'red'
+    // ctx.strokeStyle = 'red'
     // ctx.strokeRect(50, 50, 100, 100); //4 parameters (pos x, pos y, height, width)
 
     // ctx.beginPath();
@@ -103,7 +106,7 @@ window.addEventListener("load", () => {
         mouseY=parseInt(e.clientY-offsetY);
 
         if(!painting) return;
-        ctx.lineWidth = 10;
+        ctx.lineWidth = 5;
         ctx.lineCap = 'round';
 
         ctx.lineTo(mouseX, mouseY);
@@ -116,6 +119,22 @@ window.addEventListener("load", () => {
     canvas.addEventListener('mouseup', finishedPosition);
     canvas.addEventListener('mousemove', draw);
 });
+
+//radio song
+let radioAudio = new Audio('./Resources/The Great Escape.mp3')
+let isPlaying = false;
+
+const radioToggle = () => {
+    isPlaying ? radioAudio.pause() : radioAudio.play();
+};
+
+radioAudio.onplaying = () => {
+    isPlaying = true;
+};
+
+radioAudio.onpause = () => {
+    isPlaying = false;
+};
 
 
 
