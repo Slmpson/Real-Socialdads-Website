@@ -1012,6 +1012,8 @@ h6{
     width: 100vw;
     height: 100vh;
     display: flex;
+    background-color: #f1f1f1;
+    overflow: hidden;
 }
 
 .rob-tactics-container-left{
@@ -1028,7 +1030,6 @@ h6{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 1rem;
     flex-direction: column;
 }
 
@@ -1055,7 +1056,6 @@ h6{
 }
 
 .container-one-right{
-    margin: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1119,4 +1119,149 @@ h6{
     left: 3em;
 }
 
+.noticeBoard{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./Resources/corkBackground.jpg);
+}
+
+.noticeBoard img{
+    height: 200px;
+    width: 200px;
+}
+
+.picture-container{
+    position: relative;
+    /* background-color: lightgrey; */
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.picture-container .polaroid{
+    position: absolute;
+    border: 1px solid grey;
+    background-color: white;
+    padding: 15px 15px 60px 15px;
+    box-shadow: 5px 5px 15px black;
+    transition: 500ms linear;
+    z-index: 1;
+}
+
+.picture-container .polaroid:after{
+        content: attr(polaroid-caption);
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: calc(100% - 20px);
+        padding: 10px;
+        font-size: 15px;
+        text-align: center;
+        font-family: cursive;
+}
+
+.picture-container .polaroid.zoom{
+    transform: scale(2.5);
+    left: 850px;
+    top: 300px;
+    z-index: 10;
+}
+
+.picture-container .image1{
+    left: 100px;
+    top: 100px;
+    transform: rotate(-20deg);
+}
+
+.picture-container .image2{
+    left: 500px;
+    top: 50px;
+    transform: rotate(-5deg);
+}
+
+.picture-container .image3{
+    left: 300px;
+    top: 50px;
+    transform: rotate(5deg);
+}
+
+.picture-container .image4{
+    left: 1000px;
+    top: 100px;
+    transform: rotate(20deg);
+}
+
+.picture-container .image5{
+    left: 1250px;
+    top: 100px;
+    transform: rotate(-15deg);
+}
+
+.picture-container .image6{
+    left: 1500px;
+    top: 100px;
+    transform: rotate(2deg);
+}
+
+.picture-container .image7{
+    left: 80px;
+    top: 600px;
+    transform: rotate(1deg);
+}
+
+.picture-container .image8{
+    left: 300px;
+    top: 600px;
+    transform: rotate(20deg);
+}
+
+.picture-container .image9{
+    left: 500px;
+    top: 450px;
+    transform: rotate(-20deg);
+}
+
+.picture-container .image10{
+    left: 800px;
+    top: 400px;
+    transform: rotate(0deg);
+}
+
+.picture-container .image11{
+    left: 1300px;
+    top: 450px;
+    transform: rotate(-20deg);
+}
+
+.picture-container .image12{
+    left: 1500px;
+    top: 500px;
+    transform: rotate(10deg);
+}
+
+.board-title{
+    position: absolute;
+    bottom: 50px;
+    left: 550px;
+    background-color: #f1f1f1;
+    box-shadow: 5px 5px 15px black;
+    padding: 10px 50px;
+}
+
+.board-title span{
+    font-size: 10px;
+}
+
+.polaroid:hover{
+    transform: scale(1.1);
+    z-index: 10;
+}
+
 /*----------------------------tactics.html end----------------------*/
+
+/* .polaroid:hover{
+    transform: scale(2.5);
+    z-index: 10;
+    top: 300px;
+    left: 850px;
+} */

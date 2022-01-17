@@ -1,12 +1,9 @@
 const lastModified = () => {
     const modified = document.lastModified;
-    document.getElementById('lastModified').innerHTML = `Last updated ${modified}`
+    document.getElementById('lastModified').innerHTML = `Last updated ${modified}`;
 }
 
 lastModified();
-
-
-
 
 if (typeof gsap !== undefined) {
     if (gsap) {
@@ -74,8 +71,8 @@ window.addEventListener("load", () => {
         offsetY = BB.top;
     }
 
-    window.onscroll=function(e){ reOffset(); }
-    window.onresize=function(e){ reOffset(); }
+    window.onscroll = function (e) { reOffset(); }
+    window.onresize = function (e) { reOffset(); }
 
     // // order matters, top has an effect on that below
     // ctx.strokeStyle = 'red'
@@ -101,18 +98,18 @@ window.addEventListener("load", () => {
         ctx.beginPath(); // resets being position so lines dont auto connect
     }
 
-    function draw(e){
-        mouseX=parseInt(e.clientX-offsetX);
-        mouseY=parseInt(e.clientY-offsetY);
+    function draw(e) {
+        mouseX = parseInt(e.clientX - offsetX);
+        mouseY = parseInt(e.clientY - offsetY);
 
-        if(!painting) return;
+        if (!painting) return;
         ctx.lineWidth = 5;
         ctx.lineCap = 'round';
 
         ctx.lineTo(mouseX, mouseY);
         ctx.stroke();
         ctx.beginPath();
-        ctx.moveTo(mouseX, mouseY)
+        ctx.moveTo(mouseX, mouseY);
     }
     //event listeners
     canvas.addEventListener('mousedown', startPosition);
@@ -121,7 +118,7 @@ window.addEventListener("load", () => {
 });
 
 //radio song
-let radioAudio = new Audio('./Resources/The Great Escape.mp3')
+let radioAudio = new Audio('./Resources/The Great Escape.mp3');
 let isPlaying = false;
 
 const radioToggle = () => {
@@ -135,6 +132,47 @@ radioAudio.onplaying = () => {
 radioAudio.onpause = () => {
     isPlaying = false;
 };
+
+const boardImageNodes = document.querySelectorAll('.polaroid');
+const boardImages = [...boardImageNodes]; //gives array
+
+if(boardImages){
+    boardImages.forEach((image) => {
+        image.addEventListener('click', (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (canZoomImage(image)) {
+                image.classList.add('zoom');
+            } else {
+                image.classList.remove('zoom');
+            }
+        })
+    });
+
+    document.body.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const zoomedImages = boardImages.filter(i => i.classList.contains('zoom'));
+        if (zoomedImages && zoomedImages.length > 0) {
+            zoomedImages.forEach((image) => {
+                image.classList.remove('zoom');
+            })
+        }
+    });
+}
+
+const canZoomImage = (image) => {
+    return boardImages.every(i => !i.classList.contains("zoom")) && !image.classList.contains("zoom");
+}
+
+
+
+
+
+
+
 
 
 
