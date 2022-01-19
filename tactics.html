@@ -6,46 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js" defer></script>
+    <script src="./js/script.js" defer></script>
     <script src="https://kit.fontawesome.com/339bff3e9e.js" crossorigin="anonymous"></script>
     
     <title>Real Socialdads FC | Fixtures & Results</title>
 </head>
 <body>
-    <header>
-        <div class="clubLogo">
-            <img src="./Resources/clublogo.png" alt="Club Logo">
-        </div>
-        <div class="heading">
-            <h1>Real Socialdads FC</h1>
-            <h3>South Woodham Ferrers 5-a-side team</h3>
-        </div>
-        <div class="sponsorLogo">
-            <img src="./Resources/greenekinglogo.png" alt="Sponsor Logo">
-        </div>
-    </header>
+    <header class="headerScript"></header>
+    <nav class="navScript"></nav>
 
-    <nav>
-        <div class="nav-container">
-            <ul class="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="matches.html">Fixtures & Results</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="stats.html">Statistics</a></li>
-                <li><a href="chickenchat.html">Chicken Chat</a></li>
-                <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="tactics.html">Rob's Tactics</a></li>
-                <li><a href="signup.html">Sign up</a></li>
-            </ul>
-        </div>
-    </nav>
-
-
-    <img class="underConstruction" src="/Resources/underConstruction.png" alt="">
-
-        <!-- <div class="tactics-section-one">
+        <div class="tactics-section-one">
             <div class="tactics-section-one__text">
                 <h1 class="tactics-section-one__title">Want to get better at football?</h1>
                 <h2 class="tactics-section__subtitle">We have just the man for you!</h2>
@@ -91,14 +66,16 @@
                 <div class="container-two-right">
                     <img src="./Resources/rob-tactics1.png" class="rob-prep-img" alt="">
                     <div class="container-two-right-list">
-                       <p>"Preparation is key!"</p> 
+                       <p>"Preparation is key! My 10-point-plan for victory!" </p> 
                        <ul>
                            <li>Plan accordingly - be one step ahead of your opponents.</li>
                            <li>Play to your strengths.</li>
                            <li>Cover your weaknesses.</li>
+                           <li>Psych out the opposition using <strong>any</strong> means necessary </li>
                            <li>Pass to the younger players.</li>
                            <li>Remember: You never win anything with kids.</li>
                        </ul>
+                       <p>Highlights of my successful action plan can be seen below...</p>
                        <a onclick="radioToggle()">
                             <img src="./Resources/radio.png" class="radio-img" alt="">
                        </a>
@@ -109,60 +86,66 @@
 
         <div class="noticeBoard">
             <div class="picture-container"> 
-                <div class="polaroid image1" polaroid-caption="caption here">
-                   <img src="./Resources/clipboard-1.jpg" alt=""> 
+                <div class="polaroid image1" polaroid-caption='"I should have called for it."'>
+                    <img src="./Resources/pin.png" class="pin">
+                   <img src="./Resources/clipboard-1.jpg" class="noticeBoardImage" alt=""> 
                 </div>
-                <div class="polaroid image2" polaroid-caption="caption here">
-                    <img src="./Resources/clipboard-2.jpg" alt="">
+                <div class="polaroid image2" polaroid-caption="Always, ALWAYS, have someone in your team who can do this.">
+                    <img src="./Resources/pin.png" class="pin">
+                    <img src="./Resources/clipboard-2.jpg" class="noticeBoardImage" alt="">
                 </div>
-                <div class="polaroid image3" polaroid-caption="caption here">
-                    <img src="./Resources/clipboard-3.jpg" alt="">
+                <div class="polaroid image3" polaroid-caption="Offering yourself for beheading is no compensation for not putting away your chances.">
+                    <img src="./Resources/pin.png" class="pin">
+                    <img src="./Resources/clipboard-3.jpg" class="noticeBoardImage" alt="">
                 </div>
-                <div class="polaroid image4" polaroid-caption="caption here">
-                    <img src="./Resources/clipboard-4.jpg" alt="">
+                <div class="polaroid-small image4" polaroid-small-caption="A good half time team talk should be like a committee designing a cow - sixteen legs, eight udders and play the simple bull.">
+                    <img src="./Resources/pin.png" class="pin">
+                    <img src="./Resources/clipboard-4.jpg" class="noticeBoardImage" alt="">
                 </div>
-                <div class="polaroid image5" polaroid-caption="caption here">
-                    <img src="./Resources/clipboard-5.jpg" alt="">
+                <div class="polaroid image5" polaroid-caption="Always ensure you have voided your bowels PRIOR to kick off.">
+                    <img src="./Resources/pin.png" class="pin">
+                    <img src="./Resources/clipboard-5.jpg" class="noticeBoardImage" alt="">
                 </div>
-                <div class="polaroid image6" polaroid-caption="caption here">
-                    <img src="./Resources/clipboard-6.jpg" alt="">
+                <div class="polaroid image6" polaroid-caption="If all else fails, skittle the bastard.">
+                    <img src="./Resources/pin.png" class="pin">
+                    <img src="./Resources/clipboard-6.jpg" class="noticeBoardImage" alt="">
                 </div>
-                <div class="polaroid image7" polaroid-caption="caption here">
-                    <img src="./Resources/clipboard-7.jpg" alt="">
+                <div class="polaroid image7" polaroid-caption="Baiting the opposition substitutes will give your creative players an advantage on the pitch.">
+                    <img src="./Resources/pin.png" class="pin">
+                    <img src="./Resources/clipboard-7.jpg" class="noticeBoardImage" alt="">
                 </div>
-                <div class="polaroid image8" polaroid-caption="caption here">
-                    <img src="./Resources/clipboard-8.jpg" alt="">
+                <div class="polaroid image8" polaroid-caption="You should not use the wide areas of the pitch to hook up with acquaintances from Grindr">
+                    <img src="./Resources/pin.png" class="pin">
+                    <img src="./Resources/clipboard-8.jpg" class="noticeBoardImage" alt="">
                 </div>
-                <div class="polaroid image9" polaroid-caption="caption here">
-                    <img src="./Resources/clipboard-9.jpg" alt="">
+                <div class="polaroid image9" polaroid-caption="When setting up your defensive strategy, it's best to mark up like for like.">
+                    <img src="./Resources/pin.png" class="pin">
+                    <img src="./Resources/clipboard-9.jpg" class="noticeBoardImage" alt="">
                 </div>
                 <div class="polaroid image10" polaroid-caption="Captain Fantastic!">
-                    <img src="./Resources/clipboard-10.jpg" alt="">
+                    <img src="./Resources/pin.png" class="pin">
+                    <img src="./Resources/clipboard-10.jpg" class="noticeBoardImage" alt="">
                 </div>
-                <div class="polaroid image11" polaroid-caption="caption here">
-                    <img src="./Resources/clipboard-11.jpg" alt="">
+                <div class="polaroid-small image11" polaroid-small-caption="Chaos theory simply suggests that what appears to most people as chaos is not really chaotic, but a series of different orders with which the human mind has not yet become familiar.">
+                    <img src="./Resources/pin.png" class="pin">
+                    <img src="./Resources/clipboard-11.jpg" class="noticeBoardImage" alt="">
                 </div>
-                <div class="polaroid image12" polaroid-caption="caption here">
-                    <img src="./Resources/clipboard-12.jpg" alt="">
+                <div class="polaroid-small image12" polaroid-small-caption="Attempting to chip the keeper is not big, it's not funny and is likely to be questioned even before the ball has gone over.">
+                    <img src="./Resources/pin.png" class="pin">
+                    <img src="./Resources/clipboard-12.jpg" class="noticeBoardImage" alt="">
                 </div>
                 <div class="board-title">
-                    <h1>My Victory As Captain! <span>Monday 10th 2022</span></h1>
+                    <h1>My Victory As Captain! <span>Monday 10th January, 2022</span></h1>
                 </div>
             </div>
             
-        </div> -->
+        </div>
 
-
-    <footer>
-        <h5>&copy Copyright Real Socialdads Football Club</h5>
-        <a href="mailto:chickenchat@btinternet.com" class="footer__link">chickenchat@btinternet.com</a>
-        <ul class="social-list">
-            <li class="social-list__item"><a href="#" class="social-list__link"><i class="fab fa-facebook"></i></i></a></li>
-            <li class="social-list__item"><a href="#" class="social-list__link"><i class="fab fa-instagram"></i></a></li>
-            <li class="social-list__item"><a href="#" class="social-list__link"><i class="fab fa-twitter"></i></a></li>
-        </ul>
-        <h6 id=lastModified></h6>
-    </footer>
+        <footer class="footerScript"></footer>
+    
+        <script src="./js/header.js"></script>
+        <script src="./js/footer.js"></script>
+        <script src="./js/tactics.js"></script>
 
 
 </body>

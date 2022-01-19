@@ -208,7 +208,7 @@ main {
 
 .goal-scorers{
     font-weight: bold;
-    padding: 0.7rem;
+    padding: 0.2rem 0 0.2rem 0.7rem;
     color: white;
 }
 
@@ -874,7 +874,6 @@ h6{
 
 /* -------------------------- stats.html ------------------------*/
 
-/* https://www.youtube.com/watch?v=Ay93z3mZuh8 */
 
 .season-dropdown-container{
     width: 50%;
@@ -922,6 +921,10 @@ h6{
 
 
 /* ---------------------------tactics.html--------------------------*/
+
+.tactics-section-one{
+    margin-top: 3rem;
+}
 
 .tactics-section-one, .tactics-section-two, .tactics-section-three{
     width: 100%;
@@ -1121,11 +1124,20 @@ h6{
 
 .noticeBoard{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-image: url(./Resources/corkBackground.jpg);
 }
 
-.noticeBoard img{
+.pin{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    transition: 500ms linear;
+}
+
+.noticeBoard .noticeBoardImage{
     height: 200px;
     width: 200px;
 }
@@ -1138,6 +1150,7 @@ h6{
     z-index: 0;
 }
 
+
 .picture-container .polaroid{
     position: absolute;
     border: 1px solid grey;
@@ -1148,22 +1161,58 @@ h6{
     z-index: 1;
 }
 
+.picture-container .polaroid-small{
+    position: absolute;
+    border: 1px solid grey;
+    background-color: white;
+    padding: 15px 15px 60px 15px;
+    box-shadow: 5px 5px 15px black;
+    transition: 500ms linear;
+    z-index: 1;
+}
+
+.picture-container .polaroid:before{
+    content: '';
+    background: url(./Resources/pin.png);
+}
+
 .picture-container .polaroid:after{
         content: attr(polaroid-caption);
         position: absolute;
-        bottom: 0px;
+        bottom: 0;
         left: 0px;
         width: calc(100% - 20px);
         padding: 10px;
         font-size: 15px;
         text-align: center;
-        font-family: cursive;
+        line-height: 1.2;
+        font-family: 'Kalam', cursive;
+}
+
+.picture-container .polaroid-small:after{
+        content: attr(polaroid-small-caption);
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        width: calc(100% - 20px);
+        padding: 10px;
+        font-size: 10.5px;
+        text-align: center;
+        line-height: 1.2;
+        font-family: 'Kalam', cursive;
 }
 
 .picture-container .polaroid.zoom{
     transform: scale(2.5);
-    left: 850px;
-    top: 300px;
+    left: 43vw;
+    top: 30vh;
+    z-index: 10;
+}
+
+.picture-container .polaroid-small.zoom{
+    transform: scale(2.5);
+    left: 43vw;
+    top: 30vh;
     z-index: 10;
 }
 
@@ -1253,6 +1302,21 @@ h6{
 }
 
 .polaroid:hover{
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.polaroid:hover .pin{
+    top: -70px;
+    left: 60%;
+}
+
+.polaroid-small:hover .pin{
+    top: -70px;
+    left: 60%;
+}
+
+.polaroid-small:hover{
     transform: scale(1.1);
     z-index: 10;
 }

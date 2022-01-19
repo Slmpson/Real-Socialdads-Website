@@ -1,10 +1,3 @@
-const lastModified = () => {
-    const modified = document.lastModified;
-    document.getElementById('lastModified').innerHTML = `Last updated ${modified}`;
-}
-
-lastModified();
-
 if (typeof gsap !== undefined) {
     if (gsap) {
         let timelineSectionOne = gsap.timeline({
@@ -95,7 +88,7 @@ window.addEventListener("load", () => {
 
     function finishedPosition() {
         painting = false;
-        ctx.beginPath(); // resets being position so lines dont auto connect
+        ctx.beginPath(); // resets begin position so lines dont auto connect
     }
 
     function draw(e) {
@@ -133,8 +126,9 @@ radioAudio.onpause = () => {
     isPlaying = false;
 };
 
-const boardImageNodes = document.querySelectorAll('.polaroid');
+const boardImageNodes = document.querySelectorAll('.polaroid, .polaroid-small');
 const boardImages = [...boardImageNodes]; //gives array
+const noticeBoard = document.querySelector('.noticeBoard');
 
 if(boardImages){
     boardImages.forEach((image) => {
@@ -150,7 +144,7 @@ if(boardImages){
         })
     });
 
-    document.body.addEventListener('click', (event) => {
+    noticeBoard.addEventListener('click', (event) => {
         event.preventDefault();
         event.stopPropagation();
 
@@ -166,13 +160,3 @@ if(boardImages){
 const canZoomImage = (image) => {
     return boardImages.every(i => !i.classList.contains("zoom")) && !image.classList.contains("zoom");
 }
-
-
-
-
-
-
-
-
-
-
