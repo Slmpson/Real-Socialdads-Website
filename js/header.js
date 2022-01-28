@@ -3,6 +3,7 @@ const createHeader = () => {
     let nav = document.querySelector('.navScript')
 
     header.innerHTML = `
+    <div class="container">
     <div class="clubLogo">
             <img src="./Resources/clublogo.png" alt="Club Logo">
         </div>
@@ -15,7 +16,7 @@ const createHeader = () => {
                <img src="./Resources/greenekinglogo.png" alt="Sponsor Logo"> 
             </a>
         </div>
-    </header>
+    </div>    
     `;
 
     nav.innerHTML = `
