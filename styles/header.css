@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root{
+    --clr-primary: hsl(150, 87%, 27%);
+    --clr-dark: hsl(0, 5%, 11%);
+}
+
+.underConstruction {
+    display: block;
+    margin: 0 auto;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+table, thead, tr, td {
+    padding: 0.8rem;
+}
+
+/* Header */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(90deg, var(--clr-primary) 53%, var(--clr-dark) 89%)
+}
+
+.clubLogo{
+    flex: 1;
+    margin-top: .3rem;
+    margin-bottom: .3rem;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 4;
+    color: white;
+}
+
+.heading h1, h3{
+    padding: 0.5rem;
+}
+
+.sponsorLogo{
+    flex: 1;
+}
+
+.sponsorLogo img{
+    padding: 2rem;
+}
+
+header .clubLogo img{
+    height: auto;
+    width: 9rem;
+}
+
+header .sponsorLogo img {
+    height: auto;
+    width: 14rem;
+}
+
+/* Header end */
+
+/* Nav bar*/
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(0, 5%, 11%);
+}
+
+
+.navbar li {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-left: 1px solid white;
+    cursor: pointer;
+    font-weight: 600;
+    list-style-type: none;
+    transition: 300ms linear;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 2em;     
+    margin: -2em;
+}
+
+.navbar li:hover {
+    background-color: #333;
+}
+
+/* Nav bar end */
