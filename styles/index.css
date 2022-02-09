@@ -132,6 +132,7 @@
 .news-story-2 img {
     width: 100%;
     height: 15rem;
+    border: 1px solid black;
 }
 
 .newsHeading{

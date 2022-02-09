@@ -4,7 +4,7 @@
 
 .col-4 img{
     height: auto;
-    width: 30%;
+    width: 25%;
 }
 
 .date{
@@ -55,4 +55,17 @@
 
 .fa-star{
     color: gold;
+}
+
+.season-dropdown-container{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#season-dropdown{
+    padding: .5rem;
 }
