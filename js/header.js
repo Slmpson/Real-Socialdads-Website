@@ -27,7 +27,7 @@ const createHeader = () => {
                 <li><a href="matches.html">Fixtures & Results</a></li>
                 <li><a href="team.html">Team</a></li>
                 <li><a href="stats.html">Statistics</a></li>
-                <li><a href="chickenchat.html">Chicken Chat</a></li>
+                <li><a href="chickenchat_vol1.html">Chicken Chat</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="tactics.html">Rob's Tactics</a></li>
                 <li><a href="signup.html">Sign up</a></li>

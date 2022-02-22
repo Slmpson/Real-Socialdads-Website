@@ -1,23 +1,48 @@
 .volume-container{
     width: 80%;
     margin: 0 auto;
-    display: flex;
-    justify-content:space-between ;
-    align-items: center;
     padding: 1rem;
 }
 
-.volume-container button{
-    padding: .4rem;
-    background-color: var(--clr-primary);
-    color: white;
-    border: none;
-    border-radius: 5%;
-    cursor: pointer;
+.volume-nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-.volume-container button:hover{
+
+
+.volume-nav li{
+    padding: .5rem;
+    cursor: pointer;
+    font-weight: 400;
+    list-style-type: none;
+    background-color: var(--clr-primary);
+    border-radius: 5%;
+}
+
+.volume-nav a{
+    text-decoration: none;
+    color: white;
+}
+
+.volume-nav li:hover{
     opacity: 0.8;
+}
+
+.active{
+    border: 3px solid black;
+}
+
+.hide{
+    display: none ;
+}
+
+.unavailable{
+    background-color: red !important; 
+    cursor: not-allowed !important;
 }
 
 .book-container{
@@ -147,4 +172,5 @@ button:hover i{
 #p7{
     z-index: 1;
 }
+
 
