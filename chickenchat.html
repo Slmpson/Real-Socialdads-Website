@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,149 @@
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/chickenchat.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/339bff3e9e.js" crossorigin="anonymous"></script>
     <title>Real Socialdads FC | Fixtures & Results</title>
 </head>
+
 <body>
     <header class="headerScript"></header>
     <nav class="navScript"></nav>
 
     <img class="underConstruction" src="/Resources/underConstruction.png" alt="">
 
+    <div class="book-container">
+        <!-- Prev button -->
+        <button id="prev-btn">
+            <i class="fas fa-arrow-circle-left"></i>
+        </button>
+
+        <!-- Book -->
+        <div id="book">
+            <!-- Paper 1 -->
+            <div id="p1" class="paper">
+                <div class="front">
+                    <div id="f1" class="front-content">
+                        <img src="./Resources/Chicken_Chat_Vol_1/CC_Page1_Vol1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="back-content">
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 2 -->
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="f2" class="front-content">
+                        <img src="./Resources/Chicken_Chat_Vol_1/CC_Page2_Vol1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="back-content">
+                        <img src="./Resources/Chicken_Chat_Vol_1/CC_Page3_Vol1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 3 -->
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="front-content">
+                        <img src="./Resources/Chicken_Chat_Vol_1/CC_Page4_Vol1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="back-content">
+                        <img src="./Resources/Chicken_Chat_Vol_1/CC_Page5_Vol1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 4 -->
+            <div id="p4" class="paper">
+                <div class="front">
+                    <div id="f4" class="front-content">
+                        <img src="./Resources/Chicken_Chat_Vol_1/CC_Page6_Vol1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b4" class="back-content">
+                        <img src="./Resources/Chicken_Chat_Vol_1/CC_Page7_Vol1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 5 -->
+            <div id="p5" class="paper">
+                <div class="front">
+                    <div id="f5" class="front-content">
+                        <img src="./Resources/Chicken_Chat_Vol_1/CC_Page8_Vol1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b5" class="back-content">
+                        <img src="./Resources/Chicken_Chat_Vol_1/CC_Page9_Vol1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 6 -->
+            <div id="p6" class="paper">
+                <div class="front">
+                    <div id="f6" class="front-content">
+                        <img src="./Resources/Chicken_Chat_Vol_1/CC_Page10_Vol1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b6" class="back-content">
+                        <img src="./Resources/Chicken_Chat_Vol_1/CC_Page11_Vol1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 7 -->
+            <div id="p7" class="paper">
+                <div class="front">
+                    <div id="f7" class="front-content">
+                        <img src="./Resources/Chicken_Chat_Vol_1/CC_Page12_Vol1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b7" class="back-content">
+                        <img src="./Resources/Chicken_Chat_Vol_1/CC_Page13_Vol1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 8 -->
+            <div id="p8" class="paper">
+                <div class="front">
+                    <div id="f8" class="front-content">
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b8" class="back-content">
+                        <img src="./Resources/Chicken_Chat_Vol_1/CC_Page14_Vol1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Next button -->
+        <button id="next-btn">
+            <i class="fas fa-arrow-circle-right"></i>
+        </button>
+    </div>
+
+
+
+
+
 
     <footer class="footerScript"></footer>
 
     <script src="./js/header.js"></script>
     <script src="./js/footer.js"></script>
+    <script src="./js/chickenchat.js"></script>
+
 </body>
+
 </html>
