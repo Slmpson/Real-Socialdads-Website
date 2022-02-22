@@ -84,11 +84,12 @@
     height: 177px;
     width: 200px;
     position: relative;
+    margin-top: 5%;
 }
 
 .away-team h4{
-    position: absolute;
-    bottom: 0;    
+    /* position: absolute; */
+    /* bottom: 0;     */
 }
 
 .goal-scorers{
