@@ -6,8 +6,8 @@ const createVolumeNav = () => {
         <ul class="volume-nav">
             <li><a href="chickenchat_vol1.html">Volume 1</a></li>
             <li><a href="chickenchat_vol2.html">Volume 2</a></li>
-            <li class="unavailable"><a href="chickenchat_vol3.html" class="unavailable">Volume 3</a></li>
-            <li class="unavailable"><a href="chickenchat_vol4.html" class="unavailable">Volume 4</a></li>
+            <li><a href="chickenchat_vol3.html">Volume 3</a></li>
+            <li><a href="chickenchat_vol4.html">Volume 4</a></li>
             <li class="unavailable"><a href="chickenchat_vol5.html" class="unavailable">Volume 5</a></li>
             <li class="unavailable"><a href="chickenchat_vol6.html" class="unavailable">Volume 6</a></li>
             <li class="unavailable"><a href="chickenchat_vol7.html" class="unavailable">Volume 7</a></li>
