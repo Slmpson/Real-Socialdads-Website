@@ -1,3 +1,25 @@
+.volume-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    padding: 1rem;
+}
+
+.volume-container button{
+    padding: .4rem;
+    background-color: var(--clr-primary);
+    color: white;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.volume-container button:hover{
+    opacity: 0.8;
+}
+
 .book-container{
     height: 100vh;
     display: flex;
@@ -71,7 +93,8 @@
 }
 
 /* buttons */
-button{
+#prev-btn,
+#next-btn{
     border: none;
     background-color: transparent;
     cursor: pointer;
