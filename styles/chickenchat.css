@@ -71,7 +71,6 @@
 
 .front,
 .back{
-    /* background-color: rgb(206, 221, 224); */
     background-image: radial-gradient(white, rgb(161, 175, 177));
     position: absolute;
     width: 100%;
@@ -85,7 +84,7 @@
 .front{
     z-index: 1;
     backface-visibility: hidden;
-    border-left: 3px solid black;
+    border-left: 2px solid black;
 }
 
 .back{
