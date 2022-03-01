@@ -33,7 +33,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background:linear-gradient(90deg, var(--clr-primary) 53%, var(--clr-dark) 89%)
+    background:linear-gradient(90deg, var(--clr-primary) 25%, var(--clr-dark) 85%)
 }
 
 .clubLogo{
