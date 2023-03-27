@@ -9,7 +9,7 @@ const createFooter = () => {
             <li class="social-list__item"><a href="#" class="social-list__link"><i class="fab fa-instagram"></i></a></li>
             <li class="social-list__item"><a href="#" class="social-list__link"><i class="fab fa-twitter"></i></a></li>
         </ul>
-        <h6>Last Modified: 03/12/2022</h6>
+        <h6>Last Modified: 27/03/2023</h6>
     `;
 }
 
